@@ -13,7 +13,9 @@ name=None
 
 #--standy functions-------
 def donothing():
-    return
+    #better to use pass instead of using return
+    pass
+
 def version_info():
     t1=Tk()
     t1.title("Version Info")
@@ -21,7 +23,7 @@ def version_info():
     label.pack()
 def about():
     t1=Tk()
-    t1.title("About")
+    t1.title("About Us")
     text="""Using ImManager you can:
 view image files of supported formats(JPEG, GIF, PNG, BMP, Webp..),
 resize them to your choice whether in terms of height or width or both,
@@ -94,7 +96,7 @@ def checkzero(tup):
         return True
 def checkmode():
     try:
-        r,b,g=img_ori.split()
+        r,g,b=img_ori.split()
     except ValueError:
         info.configure(text="Image doesn't have 3 color modes")
         info.text="Image doesn't have 3 color modes"
